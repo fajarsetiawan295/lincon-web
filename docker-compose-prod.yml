@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  lincon-web:
+    image: lincon-web:prod
+    container_name: lincon-web
+    restart: unless-stopped
+    ports:
+      - 2009:5000
+    build:
+      context: ./
+      dockerfile: Dockerfile-prod

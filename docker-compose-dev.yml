@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  lincon-web:
+    image: lincon-web:dev
+    container_name: lincon-web
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app
+    build:
+      context: ./
+      dockerfile: Dockerfile-dev
