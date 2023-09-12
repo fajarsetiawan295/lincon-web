@@ -16,13 +16,19 @@ const SidebarMenuMain = () => {
         title={intl.formatMessage({id: 'MENU.DASHBOARD'})}
         fontIcon='bi-app-indicator'
       />
-      <SidebarMenuItem to='/builder' icon='switch' title='Layout Builder' fontIcon='bi-layers' />
+      {/* <SidebarMenuItem to='/builder' icon='switch' title='Layout Builder' fontIcon='bi-layers' /> */}
       <div className='menu-item'>
         <div className='menu-content pt-8 pb-2'>
-          <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Crafted</span>
+          <span className='menu-section text-white text-uppercase fs-8 ls-1'>Management Sales</span>
         </div>
       </div>
-      <SidebarMenuItemWithSub
+      <SidebarMenuItem
+        to='/sales/views'
+        icon='element-plus'
+        title={'Sales'}
+        fontIcon='bi-app-indicator'
+      />
+      {/* <SidebarMenuItemWithSub
         to='/crafted/pages'
         title='Pages'
         fontIcon='bi-archive'
@@ -82,13 +88,13 @@ const SidebarMenuMain = () => {
         <SidebarMenuItem to='/crafted/widgets/mixed' title='Mixed' hasBullet={true} />
         <SidebarMenuItem to='/crafted/widgets/tables' title='Tables' hasBullet={true} />
         <SidebarMenuItem to='/crafted/widgets/feeds' title='Feeds' hasBullet={true} />
-      </SidebarMenuItemWithSub>
+      </SidebarMenuItemWithSub> */}
       <div className='menu-item'>
         <div className='menu-content pt-8 pb-2'>
-          <span className='menu-section text-muted text-uppercase fs-8 ls-1'>Apps</span>
+          <span className='menu-section text-white text-uppercase fs-8 ls-1'>Apps</span>
         </div>
       </div>
-      <SidebarMenuItemWithSub
+      {/* <SidebarMenuItemWithSub
         to='/apps/chat'
         title='Chat'
         fontIcon='bi-chat-left'
@@ -97,8 +103,8 @@ const SidebarMenuMain = () => {
         <SidebarMenuItem to='/apps/chat/private-chat' title='Private Chat' hasBullet={true} />
         <SidebarMenuItem to='/apps/chat/group-chat' title='Group Chart' hasBullet={true} />
         <SidebarMenuItem to='/apps/chat/drawer-chat' title='Drawer Chart' hasBullet={true} />
-      </SidebarMenuItemWithSub>
-      <SidebarMenuItem
+      </SidebarMenuItemWithSub> */}
+      {/* <SidebarMenuItem
         to='/apps/user-management/users'
         icon='abstract-28'
         title='User management'
@@ -115,7 +121,7 @@ const SidebarMenuMain = () => {
           </span>
           <span className='menu-title'>Changelog {process.env.REACT_APP_VERSION}</span>
         </a>
-      </div>
+      </div> */}
     </>
   )
 }

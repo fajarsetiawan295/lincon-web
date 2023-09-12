@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {KTIcon} from '../../../helpers'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
+import { KTIcon } from '../../../helpers'
+import { Dropdown1 } from '../../content/dropdown/Dropdown1'
 
 type Props = {
   className: string
 }
 
-const ListsWidget6: React.FC<Props> = ({className}) => {
+const ListsWidget6: React.FC<Props> = ({ className }) => {
   return (
     <div className='card card-xl-stretch mb-5 mb-xl-8'>
       {/* begin::Header */}
       <div className='card-header border-0'>
-        <h3 className='card-title fw-bold text-dark'>Notifications</h3>
+        <h3 className='card-title fw-bold text-dark'>Status Debitur</h3>
         <div className='card-toolbar'>
           {/* begin::Menu */}
           <button
@@ -32,6 +32,26 @@ const ListsWidget6: React.FC<Props> = ({className}) => {
       {/* begin::Body */}
       <div className='card-body pt-0'>
         {/* begin::Item */}
+        <div className='d-flex align-items-center bg-light-danger rounded p-5 mb-7'>
+          {/* begin::Icon */}
+          <span className=' text-danger me-5'>
+            <KTIcon iconName='abstract-26' className='text-danger fs-1 me-5' />
+          </span>
+          {/* end::Icon */}
+          {/* begin::Title */}
+          <div className='flex-grow-1 me-2'>
+            <a href='#' className='fw-bold text-gray-800 text-hover-primary fs-6'>
+              Collect Data
+            </a>
+            <span className='text-muted fw-semibold d-block'></span>
+          </div>
+          {/* end::Title */}
+          {/* begin::Lable */}
+          <span className='fw-bold text-danger py-1'>27 Debitur</span>
+          {/* end::Lable */}
+        </div>
+        {/* end::Item */}
+        {/* begin::Item */}
         <div className='d-flex align-items-center bg-light-warning rounded p-5 mb-7'>
           {/* begin::Icon */}
           <span className=' text-warning me-5'>
@@ -41,16 +61,17 @@ const ListsWidget6: React.FC<Props> = ({className}) => {
           {/* begin::Title */}
           <div className='flex-grow-1 me-2'>
             <a href='#' className='fw-bold text-gray-800 text-hover-primary fs-6'>
-              Group lunch celebration
+              BOOKING
             </a>
-            <span className='text-muted fw-semibold d-block'>Due in 2 Days</span>
+            <span className='text-muted fw-semibold d-block'></span>
           </div>
           {/* end::Title */}
           {/* begin::Lable */}
-          <span className='fw-bold text-warning py-1'>+28%</span>
+          <span className='fw-bold text-warning py-1'>10 Debitur</span>
           {/* end::Lable */}
         </div>
         {/* end::Item */}
+
         {/* begin::Item */}
         <div className='d-flex align-items-center bg-light-success rounded p-5 mb-7'>
           {/* begin::Icon */}
@@ -61,36 +82,17 @@ const ListsWidget6: React.FC<Props> = ({className}) => {
           {/* begin::Title */}
           <div className='flex-grow-1 me-2'>
             <a href='#' className='fw-bold text-gray-800 text-hover-primary fs-6'>
-              Navigation optimization
+              PROSES
             </a>
-            <span className='text-muted fw-semibold d-block'>Due in 2 Days</span>
+            <span className='text-muted fw-semibold d-block'></span>
           </div>
           {/* end::Title */}
           {/* begin::Lable */}
-          <span className='fw-bold text-success py-1'>+50%</span>
+          <span className='fw-bold text-success py-1'>50 Debitur</span>
           {/* end::Lable */}
         </div>
         {/* end::Item */}
-        {/* begin::Item */}
-        <div className='d-flex align-items-center bg-light-danger rounded p-5 mb-7'>
-          {/* begin::Icon */}
-          <span className=' text-danger me-5'>
-            <KTIcon iconName='abstract-26' className='text-danger fs-1 me-5' />
-          </span>
-          {/* end::Icon */}
-          {/* begin::Title */}
-          <div className='flex-grow-1 me-2'>
-            <a href='#' className='fw-bold text-gray-800 text-hover-primary fs-6'>
-              Rebrand strategy planning
-            </a>
-            <span className='text-muted fw-semibold d-block'>Due in 5 Days</span>
-          </div>
-          {/* end::Title */}
-          {/* begin::Lable */}
-          <span className='fw-bold text-danger py-1'>-27%</span>
-          {/* end::Lable */}
-        </div>
-        {/* end::Item */}
+
         {/* begin::Item */}
         <div className='d-flex align-items-center bg-light-info rounded p-5'>
           {/* begin::Icon */}
@@ -101,20 +103,20 @@ const ListsWidget6: React.FC<Props> = ({className}) => {
           {/* begin::Title */}
           <div className='flex-grow-1 me-2'>
             <a href='#' className='fw-bold text-gray-800 text-hover-primary fs-6'>
-              Product goals strategy
+              APPROVED
             </a>
-            <span className='text-muted fw-semibold d-block'>Due in 7 Days</span>
+            <span className='text-muted fw-semibold d-block'></span>
           </div>
           {/* end::Title */}
           {/* begin::Lable */}
-          <span className='fw-bold text-info py-1'>+8%</span>
+          <span className='fw-bold text-info py-1'>18 Debitur</span>
           {/* end::Lable */}
         </div>
-        {/* end::Item */}
+        {/* end::Item */}      
       </div>
       {/* end::Body */}
     </div>
   )
 }
 
-export {ListsWidget6}
+export { ListsWidget6 }

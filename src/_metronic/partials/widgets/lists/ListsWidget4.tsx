@@ -1,21 +1,22 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import {KTIcon, toAbsoluteUrl} from '../../../helpers'
-import {Dropdown1} from '../../content/dropdown/Dropdown1'
+import { KTIcon, toAbsoluteUrl } from '../../../helpers'
+import { Dropdown1 } from '../../content/dropdown/Dropdown1'
+import { dateNowDMY } from '../../../helpers/dateHelpers'
 
 type Props = {
   className: string
   items?: number
 }
 
-const ListsWidget4: React.FC<Props> = ({className, items = 6}) => {
+const ListsWidget4: React.FC<Props> = ({ className, items = 6 }) => {
   return (
     <div className='card card-xl-stretch mb-xl-8'>
       {/* begin::Header */}
       <div className='card-header border-0 pt-5'>
         <h3 className='card-title align-items-start flex-column'>
-          <span className='card-label fw-bold text-dark'>Trends</span>
-          <span className='text-muted mt-1 fw-semibold fs-7'>Latest tech trends</span>
+          <span className='card-label fw-bold text-dark'>Top Sales</span>
+          <span className='text-muted mt-1 fw-semibold fs-7'>{dateNowDMY()}</span>
         </h3>
         <div className='card-toolbar'>
           {/* begin::Menu */}
@@ -34,171 +35,96 @@ const ListsWidget4: React.FC<Props> = ({className, items = 6}) => {
       </div>
       {/* end::Header */}
       {/* begin::Body */}
-      <div className='card-body pt-5'>
+      <div className='card-body pt-2'>
         {/* begin::Item */}
-        <div className='d-flex align-items-sm-center mb-7'>
-          {/* begin::Symbol */}
+        <div className='d-flex align-items-center mb-7'>
+          {/* begin::Avatar */}
           <div className='symbol symbol-50px me-5'>
-            <span className='symbol-label'>
-              <img
-                src={toAbsoluteUrl('/media/svg/brand-logos/plurk.svg')}
-                className='h-50 align-self-center'
-                alt=''
-              />
-            </span>
+            <img src={toAbsoluteUrl('/media/avatars/300-6.jpg')} className='' alt='' />
           </div>
-          {/* end::Symbol */}
-          {/* begin::Section */}
-          <div className='d-flex align-items-center flex-row-fluid flex-wrap'>
-            <div className='flex-grow-1 me-2'>
-              <a href='#' className='text-gray-800 text-hover-primary fs-6 fw-bold'>
-                Top Authors
-              </a>
-              <span className='text-muted fw-semibold d-block fs-7'>Mark, Rowling, Esther</span>
-            </div>
-            <span className='badge badge-light fw-bold my-2'>+82$</span>
+          {/* end::Avatar */}
+          {/* begin::Text */}
+          <div className='flex-grow-1'>
+            <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+              Emma Smith
+            </a>
+            <span className='text-muted d-block fw-semibold'>Bonus Rp. 10.000.000</span>
           </div>
-          {/* end::Section */}
+          {/* end::Text */}
         </div>
         {/* end::Item */}
         {/* begin::Item */}
-        <div className='d-flex align-items-sm-center mb-7'>
-          {/* begin::Symbol */}
+        <div className='d-flex align-items-center mb-7'>
+          {/* begin::Avatar */}
           <div className='symbol symbol-50px me-5'>
-            <span className='symbol-label'>
-              <img
-                src={toAbsoluteUrl('/media/svg/brand-logos/telegram.svg')}
-                className='h-50 align-self-center'
-                alt=''
-              />
-            </span>
+            <img src={toAbsoluteUrl('/media/avatars/300-5.jpg')} className='' alt='' />
           </div>
-          {/* end::Symbol */}
-          {/* begin::Section */}
-          <div className='d-flex align-items-center flex-row-fluid flex-wrap'>
-            <div className='flex-grow-1 me-2'>
-              <a href='#' className='text-gray-800 text-hover-primary fs-6 fw-bold'>
-                Popular Authors
-              </a>
-              <span className='text-muted fw-semibold d-block fs-7'>Randy, Steve, Mike</span>
-            </div>
-            <span className='badge badge-light fw-bold my-2'>+280$</span>
+          {/* end::Avatar */}
+          {/* begin::Text */}
+          <div className='flex-grow-1'>
+            <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+              Sean Bean
+            </a>
+            <span className='text-muted d-block fw-semibold'>Bonus Rp. 10.000.000</span>
           </div>
-          {/* end::Section */}
+          {/* end::Text */}
         </div>
         {/* end::Item */}
         {/* begin::Item */}
-        <div className='d-flex align-items-sm-center mb-7'>
-          {/* begin::Symbol */}
+        <div className='d-flex align-items-center mb-7'>
+          {/* begin::Avatar */}
           <div className='symbol symbol-50px me-5'>
-            <span className='symbol-label'>
-              <img
-                src={toAbsoluteUrl('/media/svg/brand-logos/vimeo.svg')}
-                className='h-50 align-self-center'
-                alt=''
-              />
-            </span>
+            <img src={toAbsoluteUrl('/media/avatars/300-11.jpg')} className='' alt='' />
           </div>
-          {/* end::Symbol */}
-          {/* begin::Section */}
-          <div className='d-flex align-items-center flex-row-fluid flex-wrap'>
-            <div className='flex-grow-1 me-2'>
-              <a href='#' className='text-gray-800 text-hover-primary fs-6 fw-bold'>
-                New Users
-              </a>
-              <span className='text-muted fw-semibold d-block fs-7'>John, Pat, Jimmy</span>
-            </div>
-            <span className='badge badge-light fw-bold my-2'>+4500$</span>
+          {/* end::Avatar */}
+          {/* begin::Text */}
+          <div className='flex-grow-1'>
+            <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+              Brian Cox
+            </a>
+            <span className='text-muted d-block fw-semibold'>Bonus Rp. 10.000.000</span>
           </div>
-          {/* end::Section */}
+          {/* end::Text */}
         </div>
         {/* end::Item */}
         {/* begin::Item */}
-        <div className='d-flex align-items-sm-center mb-7'>
-          {/* begin::Symbol */}
+        <div className='d-flex align-items-center mb-7'>
+          {/* begin::Avatar */}
           <div className='symbol symbol-50px me-5'>
-            <span className='symbol-label'>
-              <img
-                src={toAbsoluteUrl('/media/svg/brand-logos/bebo.svg')}
-                className='h-50 align-self-center'
-                alt=''
-              />
-            </span>
+            <img src={toAbsoluteUrl('/media/avatars/300-9.jpg')} className='' alt='' />
           </div>
-          {/* end::Symbol */}
-          {/* begin::Section */}
-          <div className='d-flex align-items-center flex-row-fluid flex-wrap'>
-            <div className='flex-grow-1 me-2'>
-              <a href='#' className='text-gray-800 text-hover-primary fs-6 fw-bold'>
-                Active Customers
-              </a>
-              <span className='text-muted fw-semibold d-block fs-7'>Mark, Rowling, Esther</span>
-            </div>
-            <span className='badge badge-light fw-bold my-2'>+4500$</span>
+          {/* end::Avatar */}
+          {/* begin::Text */}
+          <div className='flex-grow-1'>
+            <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+              Francis Mitcham
+            </a>
+            <span className='text-muted d-block fw-semibold'>Bonus Rp. 10.000.000</span>
           </div>
-          {/* end::Section */}
+          {/* end::Text */}
         </div>
         {/* end::Item */}
-
-        {items > 4 && (
-          <div className='d-flex align-items-sm-center mb-7'>
-            {/* begin::Symbol */}
-            <div className='symbol symbol-50px me-5'>
-              <span className='symbol-label'>
-                <img
-                  src={toAbsoluteUrl('/media/svg/brand-logos/kickstarter.svg')}
-                  className='h-50 align-self-center'
-                  alt=''
-                />
-              </span>
-            </div>
-            {/* end::Symbol */}
-            {/* begin::Section */}
-            <div className='d-flex align-items-center flex-row-fluid flex-wrap'>
-              <div className='flex-grow-1 me-2'>
-                <a href='#' className='text-gray-800 text-hover-primary fs-6 fw-bold'>
-                  Bestseller Theme
-                </a>
-                <span className='text-muted fw-semibold d-block fs-7'>Disco, Retro, Sports</span>
-              </div>
-              <span className='badge badge-light fw-bold my-2'>+4500$</span>
-            </div>
-            {/* end::Section */}
+        {/* begin::Item */}
+        <div className='d-flex align-items-center'>
+          {/* begin::Avatar */}
+          <div className='symbol symbol-50px me-5'>
+            <img src={toAbsoluteUrl('/media/avatars/300-23.jpg')} className='' alt='' />
           </div>
-        )}
-
-        {items > 5 && (
-          <div className='d-flex align-items-sm-center'>
-            {/* begin::Symbol */}
-            <div className='symbol symbol-50px me-5'>
-              <span className='symbol-label'>
-                <img
-                  src={toAbsoluteUrl('/media/svg/brand-logos/fox-hub.svg')}
-                  className='h-50 align-self-center'
-                  alt=''
-                />
-              </span>
-            </div>
-            {/* end::Symbol */}
-            {/* begin::Section */}
-            <div className='d-flex align-items-center flex-row-fluid flex-wrap'>
-              <div className='flex-grow-1 me-2'>
-                <a href='#' className='text-gray-800 text-hover-primary fs-6 fw-bold'>
-                  Fox Broker App
-                </a>
-                <span className='text-muted fw-semibold d-block fs-7'>
-                  Finance, Corporate, Apps
-                </span>
-              </div>
-              <span className='badge badge-light fw-bold my-2'>+4500$</span>
-            </div>
-            {/* end::Section */}
+          {/* end::Avatar */}
+          {/* begin::Text */}
+          <div className='flex-grow-1'>
+            <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
+              Dan Wilson
+            </a>
+            <span className='text-muted d-block fw-semibold'>Bonus Rp. 10.000.000</span>
           </div>
-        )}
+          {/* end::Text */}
+        </div>
+        {/* end::Item */}
       </div>
       {/* end::Body */}
     </div>
   )
 }
 
-export {ListsWidget4}
+export { ListsWidget4 }

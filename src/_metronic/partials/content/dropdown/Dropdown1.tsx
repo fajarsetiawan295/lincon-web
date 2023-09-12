@@ -10,23 +10,10 @@ export function Dropdown1() {
 
       <div className='px-7 py-5'>
         <div className='mb-10'>
-          <label className='form-label fw-bold'>Status:</label>
-
-          <div>
-            <select
-              className='form-select form-select-solid'
-              data-kt-select2='true'
-              data-placeholder='Select option'
-              data-allow-clear='true'
-              defaultValue={'1'}
-            >
-              <option></option>
-              <option value='1'>Approved</option>
-              <option value='2'>Pending</option>
-              <option value='3'>In Process</option>
-              <option value='4'>Rejected</option>
-            </select>
-          </div>
+          <label className='form-label fw-bold'>Filter Date:</label>
+          <label className='form-check form-check-sm form-check-custom form-check-solid me-5'>
+            <input className='form-control' type='date' value='' />
+          </label>
         </div>
 
         <div className='mb-10'>
@@ -35,28 +22,13 @@ export function Dropdown1() {
           <div className='d-flex'>
             <label className='form-check form-check-sm form-check-custom form-check-solid me-5'>
               <input className='form-check-input' type='checkbox' value='1' />
-              <span className='form-check-label'>Author</span>
+              <span className='form-check-label'>Sales</span>
             </label>
 
             <label className='form-check form-check-sm form-check-custom form-check-solid'>
               <input className='form-check-input' type='checkbox' value='2' defaultChecked={true} />
-              <span className='form-check-label'>Customer</span>
+              <span className='form-check-label'>Lead Sales</span>
             </label>
-          </div>
-        </div>
-
-        <div className='mb-10'>
-          <label className='form-label fw-bold'>Notifications:</label>
-
-          <div className='form-check form-switch form-switch-sm form-check-custom form-check-solid'>
-            <input
-              className='form-check-input'
-              type='checkbox'
-              value=''
-              name='notifications'
-              defaultChecked={true}
-            />
-            <label className='form-check-label'>Enabled</label>
           </div>
         </div>
 

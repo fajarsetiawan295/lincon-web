@@ -2,6 +2,7 @@
 import React from 'react'
 import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 import {Dropdown1} from '../../content/dropdown/Dropdown1'
+import { dateNowDMY } from '../../../helpers/dateHelpers'
 
 type Props = {
   className: string
@@ -12,7 +13,13 @@ const ListsWidget2: React.FC<Props> = ({className}) => {
     <div className={`card ${className}`}>
       {/* begin::Header */}
       <div className='card-header border-0'>
-        <h3 className='card-title fw-bold text-dark'>Authors</h3>
+
+        <h3 className='card-title align-items-start flex-column'>
+          <span className='card-label fw-bold text-dark'>Debitur Register</span>
+          <span className='text-muted mt-1 fw-semibold fs-7'>{dateNowDMY()}</span>
+        </h3>
+        
+        <span></span>
         <div className='card-toolbar'>
           {/* begin::Menu */}
           <button
@@ -43,7 +50,7 @@ const ListsWidget2: React.FC<Props> = ({className}) => {
             <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
               Emma Smith
             </a>
-            <span className='text-muted d-block fw-semibold'>Project Manager</span>
+            <span className='text-muted d-block fw-semibold'>Sales : Rina Platform : Rp: 10.000</span>
           </div>
           {/* end::Text */}
         </div>
@@ -60,7 +67,7 @@ const ListsWidget2: React.FC<Props> = ({className}) => {
             <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
               Sean Bean
             </a>
-            <span className='text-muted d-block fw-semibold'>PHP, SQLite, Artisan CLI</span>
+            <span className='text-muted d-block fw-semibold'>Sales : Giri Platform : Rp: 10.000</span>
           </div>
           {/* end::Text */}
         </div>
@@ -77,7 +84,7 @@ const ListsWidget2: React.FC<Props> = ({className}) => {
             <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
               Brian Cox
             </a>
-            <span className='text-muted d-block fw-semibold'>PHP, SQLite, Artisan CLI</span>
+            <span className='text-muted d-block fw-semibold'>Sales : Siti Platform : Rp: 10.000</span>
           </div>
           {/* end::Text */}
         </div>
@@ -94,7 +101,7 @@ const ListsWidget2: React.FC<Props> = ({className}) => {
             <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
               Francis Mitcham
             </a>
-            <span className='text-muted d-block fw-semibold'>PHP, SQLite, Artisan CLI</span>
+            <span className='text-muted d-block fw-semibold'>Sales : Siti Platform : Rp: 10.000</span>
           </div>
           {/* end::Text */}
         </div>
@@ -111,7 +118,7 @@ const ListsWidget2: React.FC<Props> = ({className}) => {
             <a href='#' className='text-dark fw-bold text-hover-primary fs-6'>
               Dan Wilson
             </a>
-            <span className='text-muted d-block fw-semibold'>PHP, SQLite, Artisan CLI</span>
+            <span className='text-muted d-block fw-semibold'>Sales : Siti Platform : Rp: 10.000</span>
           </div>
           {/* end::Text */}
         </div>
