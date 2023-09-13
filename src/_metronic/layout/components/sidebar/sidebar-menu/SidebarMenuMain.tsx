@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
-import {useIntl} from 'react-intl'
-import {KTIcon} from '../../../../helpers'
-import {SidebarMenuItemWithSub} from './SidebarMenuItemWithSub'
-import {SidebarMenuItem} from './SidebarMenuItem'
+import { useIntl } from 'react-intl'
+import { KTIcon } from '../../../../helpers'
+import { SidebarMenuItemWithSub } from './SidebarMenuItemWithSub'
+import { SidebarMenuItem } from './SidebarMenuItem'
 
 const SidebarMenuMain = () => {
   const intl = useIntl()
@@ -13,7 +13,7 @@ const SidebarMenuMain = () => {
       <SidebarMenuItem
         to='/dashboard'
         icon='element-11'
-        title={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        title={intl.formatMessage({ id: 'MENU.DASHBOARD' })}
         fontIcon='bi-app-indicator'
       />
       {/* <SidebarMenuItem to='/builder' icon='switch' title='Layout Builder' fontIcon='bi-layers' /> */}
@@ -26,8 +26,16 @@ const SidebarMenuMain = () => {
         to='/sales/views'
         icon='element-plus'
         title={'Sales'}
-        fontIcon='bi-app-indicator'
+        fontIcon='bi-archive'
       />
+
+      <SidebarMenuItem
+        to='/debitur/index'
+        icon='profile-circle'
+        title={'Dibitur'}
+        fontIcon='bi-person'
+      />
+
       {/* <SidebarMenuItemWithSub
         to='/crafted/pages'
         title='Pages'
@@ -91,9 +99,15 @@ const SidebarMenuMain = () => {
       </SidebarMenuItemWithSub> */}
       <div className='menu-item'>
         <div className='menu-content pt-8 pb-2'>
-          <span className='menu-section text-white text-uppercase fs-8 ls-1'>Apps</span>
+          <span className='menu-section text-white text-uppercase fs-8 ls-1'>Finaces</span>
         </div>
       </div>
+      <SidebarMenuItem
+        to='/pembayaran/views'
+        icon='element-7'
+        title={'Pembayaran'}
+        fontIcon='bi-layers'
+      />
       {/* <SidebarMenuItemWithSub
         to='/apps/chat'
         title='Chat'
@@ -126,4 +140,4 @@ const SidebarMenuMain = () => {
   )
 }
 
-export {SidebarMenuMain}
+export { SidebarMenuMain }

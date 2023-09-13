@@ -153,11 +153,11 @@ export function Registration() {
                 'is-valid': formik.touched.wilayah && !formik.errors.wilayah,
               }
             )}>
-            <option> Jakarta </option>
-            <option> Jawa Barat </option>
-            <option> Jawa Tengah </option>
-            <option> Jawa Timur </option>
-            <option> Banten </option>
+            <option> BNI Jakarta </option>
+            <option> BNI Jawa Barat </option>
+            <option> BNI Jawa Tengah </option>
+            <option> BNI Jawa Timur </option>
+            <option> BNI Banten </option>
           </select>
           {formik.touched.wilayah && formik.errors.wilayah && (
             <div className='fv-plugins-message-container'>

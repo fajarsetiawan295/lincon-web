@@ -1,12 +1,12 @@
 import {Route, Routes, Outlet, Navigate} from 'react-router-dom'
 import {PageLink, PageTitle} from '../../../../_metronic/layout/core'
-import {SalesListWrapper} from './sales-list/SalesList'
-import { SalesCreate } from './sales-create/SalesCreate'
+import {ListWrapper} from './list/List'
+import { SalesCreate } from './create/SalesCreate'
 
 const salesBreadcrumbs: Array<PageLink> = [
   {
-    title: 'Sales',
-    path: '/sales',
+    title: 'Pembayaran',
+    path: '/pembayaran',
     isSeparator: false,
     isActive: false,
   },
@@ -27,7 +27,7 @@ const SalesPage = () => {
           element={
             <>
               <PageTitle breadcrumbs={salesBreadcrumbs}>View</PageTitle>
-              <SalesListWrapper />
+              <ListWrapper />
             </>
           }
         />
@@ -35,13 +35,13 @@ const SalesPage = () => {
           path='create'
           element={
             <>
-              <PageTitle breadcrumbs={salesBreadcrumbs}>Create</PageTitle>
+              <PageTitle breadcrumbs={salesBreadcrumbs}>Update Tanggal Pembayaran</PageTitle>
               <SalesCreate />
             </>
           }
         />
       </Route>
-      <Route index element={<Navigate to='/sales/views' />} />
+      <Route index element={<Navigate to='/pembayaran/views' />} />
     </Routes>
   )
 }
