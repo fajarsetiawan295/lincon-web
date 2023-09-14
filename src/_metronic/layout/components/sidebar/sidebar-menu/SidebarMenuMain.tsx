@@ -23,14 +23,14 @@ const SidebarMenuMain = () => {
         </div>
       </div>
       <SidebarMenuItem
-        to='/sales/views'
+        to='/sales'
         icon='element-plus'
         title={'Sales'}
         fontIcon='bi-archive'
       />
 
       <SidebarMenuItem
-        to='/debitur/index'
+        to='/debitur'
         icon='profile-circle'
         title={'Dibitur'}
         fontIcon='bi-person'
@@ -103,9 +103,33 @@ const SidebarMenuMain = () => {
         </div>
       </div>
       <SidebarMenuItem
-        to='/pembayaran/views'
+        to='/pembayaran'
         icon='element-7'
         title={'Pembayaran'}
+        fontIcon='bi-layers'
+      />
+      <SidebarMenuItem
+        to='/insentif'
+        icon='message-text-2'
+        title={'Insentif'}
+        fontIcon='bi-layers'
+      />
+
+      <div className='menu-item'>
+        <div className='menu-content pt-8 pb-2'>
+          <span className='menu-section text-white text-uppercase fs-8 ls-1'>Setting</span>
+        </div>
+      </div>
+      <SidebarMenuItem
+        to='/roles'
+        icon='gear'
+        title={'Roles'}
+        fontIcon='bi-layers'
+      />
+      <SidebarMenuItem
+        to='/users'
+        icon='profile-circle'
+        title={'users'}
         fontIcon='bi-layers'
       />
       {/* <SidebarMenuItemWithSub

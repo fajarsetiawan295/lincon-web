@@ -69,6 +69,7 @@ const DebiturPage: React.FC = () => {
                         </>
                     }
                 />
+                <Route index element={<Navigate to='/debitur/index' />} />
             </Route>
         </Routes>
     )

@@ -5,7 +5,7 @@ import { useFormik } from 'formik'
 import clsx from 'clsx'
 
 
-const profileDetailsSchema = Yup.object().shape({
+const ValidatorSchema = Yup.object().shape({
   name: Yup.string()
     .min(3, 'Minimum 3 symbols')
     .max(50, 'Maximum 50 symbols')
@@ -24,7 +24,7 @@ const profileDetailsSchema = Yup.object().shape({
     .required('nomor whatshapp anda harus di isi'),
 })
 
-const SalesCreate = () => {
+const Create = () => {
   const [data, setData] = useState<SalesModel>(initialValues)
   const [role, setRole] = useState('');
   
@@ -36,7 +36,7 @@ const SalesCreate = () => {
   const [loading, setLoading] = useState(false)
   const formik = useFormik<SalesModel>({
     initialValues,
-    validationSchema: profileDetailsSchema,
+    validationSchema: ValidatorSchema,
     onSubmit: (values) => {
       setLoading(true)
       setTimeout(() => {
@@ -75,10 +75,10 @@ const SalesCreate = () => {
           <div className='row fv-row mb-8'>
             <div className='col-md-12'>
               {/* begin::Form group npp */}
-              <label className='form-label fw-bolder text-dark fs-6 required'>Tanggal Yang Akan di bayarkan</label>
+              <label className='form-label fw-bolder text-dark fs-6 required'>Insentif yang akan di bayarkan</label>
               <input
-                placeholder='Input NPP'
-                type='date'
+                placeholder='Input Insentif'
+                type='number'
                 autoComplete='off'
                 {...formik.getFieldProps('npp')}
                 className={clsx(
@@ -122,4 +122,4 @@ const SalesCreate = () => {
   )
 }
 
-export { SalesCreate }
+export { Create }

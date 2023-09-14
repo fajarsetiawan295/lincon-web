@@ -18,6 +18,9 @@ const PrivateRoutes = () => {
   const SalesPage = lazy(() => import('../modules/sales/sales/SalesPage'))
   const PaymentPage = lazy(() => import('../modules/finance/payment/PaymentPage'))
   const DebiturPage = lazy(() => import('../modules/debitur/DebiturPage'))
+  const InsentifPage = lazy(() => import('../modules/finance/insentif/InsentifPage'))
+  const RolesPage = lazy(() => import('../modules/user_management/roles/RolesPage'))
+  const UsersPages = lazy(() => import('../modules/user_management/users/UsersPage'))
 
   return (
     <Routes>
@@ -100,6 +103,31 @@ const PrivateRoutes = () => {
           element={
             <SuspensedView>
               <DebiturPage />
+            </SuspensedView>
+          }
+        />
+
+        <Route
+          path='insentif/*'
+          element={
+            <SuspensedView>
+              <InsentifPage />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='roles/*'
+          element={
+            <SuspensedView>
+              <RolesPage />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='users/*'
+          element={
+            <SuspensedView>
+              <UsersPages />
             </SuspensedView>
           }
         />

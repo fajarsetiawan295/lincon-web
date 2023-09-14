@@ -5,8 +5,8 @@ import { Create } from './create/Create'
 
 const Breadcrumbs: Array<PageLink> = [
   {
-    title: 'Pembayaran',
-    path: '/pembayaran',
+    title: 'insentif',
+    path: '/insentif',
     isSeparator: false,
     isActive: false,
   },
@@ -35,13 +35,13 @@ const Page = () => {
           path='create'
           element={
             <>
-              <PageTitle breadcrumbs={Breadcrumbs}>Update Tanggal Pembayaran</PageTitle>
+              <PageTitle breadcrumbs={Breadcrumbs}>Update Insentif Sales</PageTitle>
               <Create />
             </>
           }
         />
       </Route>
-      <Route index element={<Navigate to='/pembayaran/views' />} />
+      <Route index element={<Navigate to='/insentif/views' />} />
     </Routes>
   )
 }

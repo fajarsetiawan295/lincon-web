@@ -5,7 +5,9 @@ import {MegaMenu} from './MegaMenu'
 
 export function MenuInner() {
   const intl = useIntl()
+  console.log("ini data intl",intl);
   return (
+
     <>
       <MenuItem title={intl.formatMessage({id: 'MENU.DASHBOARD'})} to='/dashboard' />
       <MenuItem title='Layout Builder' to='/builder' />
