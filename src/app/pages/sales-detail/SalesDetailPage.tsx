@@ -1,17 +1,15 @@
 import { Route, Routes, Outlet, Navigate } from 'react-router-dom'
-import { PageLink, PageTitle } from '../../../../_metronic/layout/core'
-import { SalesListWrapper } from './sales-list/SalesList'
-import { SalesCreate } from './sales-create/SalesCreate'
-import { Header } from './sales-detail/header'
-import { ProfileSales } from './sales-detail/profileSales'
-import { Debitur } from './sales-detail/debitur'
-import { Sales } from './sales-detail/sales'
-import { Pembayaran } from './sales-detail/pembayaran'
+import { PageLink, PageTitle } from '../../../_metronic/layout/core'
+import { Header } from './header'
+import { ProfileSales } from './profileSales'
+import { Debitur } from './debitur'
+import { Sales } from './sales'
+import { Pembayaran } from './pembayaran'
 
 const salesBreadcrumbs: Array<PageLink> = [
   {
-    title: 'Sales',
-    path: '/sales',
+    title: 'Page Sales',
+    path: '/page-sales',
     isSeparator: false,
     isActive: false,
   },
@@ -28,26 +26,7 @@ const SalesPage = () => {
     <Routes>
       <Route element={<Outlet />}>
         <Route
-          path='views'
-          element={
-            <>
-              <PageTitle breadcrumbs={salesBreadcrumbs}>View</PageTitle>
-              <SalesListWrapper />
-            </>
-          }
-        />
-        <Route
-          path='create'
-          element={
-            <>
-              <PageTitle breadcrumbs={salesBreadcrumbs}>Create</PageTitle>
-              <SalesCreate />
-            </>
-          }
-        />
-
-        <Route
-          path='sales-profile'
+          path='page-sales-profile'
           element={
             <>
               <PageTitle breadcrumbs={salesBreadcrumbs}>Profile</PageTitle>
@@ -57,7 +36,7 @@ const SalesPage = () => {
           }
         />
         <Route
-          path='sales-debiturs'
+          path='page-sales-debiturs'
           element={
             <>
               <PageTitle breadcrumbs={salesBreadcrumbs}>List Debitur</PageTitle>
@@ -67,7 +46,7 @@ const SalesPage = () => {
           }
         />
         <Route
-          path='sales-list'
+          path='page-sales-list'
           element={
             <>
               <PageTitle breadcrumbs={salesBreadcrumbs}>Sales</PageTitle>
@@ -77,7 +56,7 @@ const SalesPage = () => {
           }
         />
         <Route
-          path='sales-pembayaran'
+          path='page-sales-pembayaran'
           element={
             <>
               <PageTitle breadcrumbs={salesBreadcrumbs}>Pembayaran</PageTitle>
@@ -87,7 +66,7 @@ const SalesPage = () => {
           }
         />
       </Route>
-      <Route index element={<Navigate to='/sales/views' />} />
+      <Route index element={<Navigate to='/page-sales/page-sales-profile' />} />
     </Routes>
   )
 }

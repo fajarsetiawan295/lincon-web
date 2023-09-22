@@ -86,7 +86,7 @@ const chart1Options = (chartColor: string, chartHeight: string): ApexOptions => 
   return {
     series: [
       {
-        name: 'Net Profit',
+        name: 'Register Debitur',
         data: [30, 30, 60, 25, 25, 40],
       },
     ],
@@ -206,7 +206,7 @@ const chart1Options = (chartColor: string, chartHeight: string): ApexOptions => 
       },
       y: {
         formatter: function (val) {
-          return '$' + val + ' thousands'
+          return val + ' debitur'
         },
       },
     },

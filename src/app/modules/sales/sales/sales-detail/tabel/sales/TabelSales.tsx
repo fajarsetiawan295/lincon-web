@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
-import { KTIcon } from '../../../../../../_metronic/helpers'
+import { KTIcon } from './../../../../../../../_metronic/helpers'
 import { TabelFilter } from './TabelFilter'
 import { Link } from 'react-router-dom'
 
@@ -34,14 +34,6 @@ const TabelSales: React.FC<Props> = ({ className }) => {
             "nomor": "082213100769",
             "nominal_insentif": "1,3",
             "jabatan": "Sales",
-            "status": "Aktif",
-        },
-        {
-            "name": "alasa",
-            "npp": "12312312312",
-            "nomor": "082213100769",
-            "nominal_insentif": "1,6",
-            "jabatan": "Sales Leader",
             "status": "Aktif",
         }
     ];

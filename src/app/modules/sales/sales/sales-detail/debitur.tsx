@@ -1,11 +1,11 @@
 import { useEffect } from 'react'
 import { useIntl } from 'react-intl'
-import { PageTitle } from '../../../_metronic/layout/core'
+import { PageTitle } from '../../../../../_metronic/layout/core'
 import {
   TablesWidget11,
-} from '../../../_metronic/partials/widgets'
+} from '../../../../../_metronic/partials/widgets'
 
-const DashboardPage = () => {
+const DebiturPage = () => {
   useEffect(() => {
     // We have to show toolbar only for dashboard page
     document.getElementById('kt_layout_toolbar')?.classList.remove('d-none')
@@ -16,6 +16,8 @@ const DashboardPage = () => {
 
   return (
     <>
+   
+
       {/* begin::Row */}
       <div className='g-5 gx-xxl-8'>
         <TablesWidget11 className='' />
@@ -25,12 +27,13 @@ const DashboardPage = () => {
   )
 }
 
-const DashboardWrapper = () => {
+const Debitur = () => {
+  const intl = useIntl()
   return (
     <>
-      <DashboardPage />
+      <DebiturPage />
     </>
   )
 }
 
-export { DashboardWrapper }
+export { Debitur }

@@ -44,7 +44,7 @@ const DebiturPage: React.FC = () => {
                     path='index'
                     element={
                         <>
-                            <PageTitle breadcrumbs={accountBreadCrumbs}>Report</PageTitle>
+                            <PageTitle breadcrumbs={accountBreadCrumbs}>Debitur</PageTitle>
                             <DashboardWrapper />
                         </>
                     }

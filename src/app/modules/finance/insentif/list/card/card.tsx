@@ -43,7 +43,7 @@ const CardTop: React.FC = () => {
                     svgIcon='chart-pie-simple'
                     color='info'
                     iconColor='white'
-                    title='$50,000'
+                    title='30'
                     titleColor='white'
                     description='Belum Di setting'
                     descriptionColor='white'
