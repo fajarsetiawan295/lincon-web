@@ -61,7 +61,7 @@ const AccountHeader: React.FC = () => {
               </div>
 
               <div className='d-flex my-4'>
-                <Link to={"/dashboard"} className='btn btn-sm btn-light me-2' id='kt_user_follow_button'>
+                <Link to={"/debitur"} className='btn btn-sm btn-light me-2' id='kt_user_follow_button'>
                   <KTIcon iconName='check' className='fs-3 d-none' />
 
                   <span className='indicator-label'>Kembali</span>
@@ -93,6 +93,17 @@ const AccountHeader: React.FC = () => {
                 to='/debitur/follow-up'
               >
                 Stage
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                className={
+                  `nav-link text-active-primary me-6 ` +
+                  (location.pathname === '/debitur/lampiran' && 'active')
+                }
+                to='/debitur/lampiran'
+              >
+                Lampiran
               </Link>
             </li>
           </ul>

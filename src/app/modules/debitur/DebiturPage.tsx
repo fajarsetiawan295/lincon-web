@@ -5,6 +5,7 @@ import { Overview } from './components/Overview'
 import { Settings } from './components/settings/Settings'
 import { AccountHeader } from './AccountHeader'
 import { DashboardWrapper } from './DashboardWrapper'
+import { Lampiran } from './components/lampiran/Lampiran'
 
 const accountBreadCrumbs: Array<PageLink> = [
     {
@@ -66,6 +67,16 @@ const DebiturPage: React.FC = () => {
                             <PageTitle breadcrumbs={accountBreadCrumbs}>Overview</PageTitle>
                             <AccountHeader />
                             <Overview />
+                        </>
+                    }
+                />
+                <Route
+                    path='lampiran'
+                    element={
+                        <>
+                            <PageTitle breadcrumbs={accountBreadCrumbs}>Overview</PageTitle>
+                            <AccountHeader />
+                            <Lampiran />
                         </>
                     }
                 />
